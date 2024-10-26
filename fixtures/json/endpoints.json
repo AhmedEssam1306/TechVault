@@ -1,0 +1,9 @@
+{
+    "health" : "/notes/api/health-check",
+    "userLogin" : "/notes/api/users/login",
+    "userRegister" : "/notes/api/users/register",
+    "userProfile" : "/notes/api/users/profile",
+    "changePassword":"/notes/api/users/change-password",
+    "createNote":"/notes/api/notes",
+    "updateNote":"/notes/api/notes/"
+}

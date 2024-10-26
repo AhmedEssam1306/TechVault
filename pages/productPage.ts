@@ -1,4 +1,4 @@
-import { Page, expect } from "@playwright/test";
+import { Page } from "@playwright/test";
 import * as path from "path";
 
 export class ProductPage {
@@ -24,7 +24,7 @@ export class ProductPage {
     await this.page.getByText("Upload").click();
     const fileChooser = await fileChooserPromise;
     await fileChooser.setFiles(
-      path.join(`D:/Playground/Test/assets/uploads/${fileName}`)
+      path.join(`D:/Playground/Test/fixtures/assets/uploads/${fileName}`)
     );
 
     const [resp] = await Promise.all([

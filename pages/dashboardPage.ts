@@ -20,6 +20,7 @@ export class DashboardPage {
       ).toBeEnabled();
     } else {
       await productLocator.nth(1).click();
+      await this.page.locator(".grid").waitFor({ state: "visible" });
     }
   }
 
@@ -66,4 +67,12 @@ export class DashboardPage {
 
     expect(productLocator).toHaveText(price + " USD");
   }
+
+  async getNthProduct(index: number) {
+    const product = this.page.locator(".grid > div").nth(index);
+    const text = await product.locator(".sc-kpDqfm").innerHTML();
+    return text;
+  }
+
+  async deleteProduct(targetProduct: string) {}
 }

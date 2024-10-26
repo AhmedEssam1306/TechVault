@@ -24,7 +24,7 @@ export class ProductPage {
     await this.page.getByText("Upload").click();
     const fileChooser = await fileChooserPromise;
     await fileChooser.setFiles(
-      path.join(`fixtures/assets/uploads/PS5.jpg/${fileName}`)
+      path.join(`fixtures/assets/uploads/${fileName}`)
     );
 
     const [resp] = await Promise.all([
